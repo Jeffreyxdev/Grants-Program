@@ -1,169 +1,141 @@
-# PolkaCompute Grant Application
+# PolkaCompute — Decentralized Off-Chain Compute Layer for Polkadot
 
-
-
----
-
-## **Project Name**
-**PolkaCompute — A Decentralized Off-Chain Compute Layer for Polkadot**
+**Proposer:** *https://github.com/Jeffreyxdev*  
+**Payment Address:** *To be filled by you*
 
 ---
 
-## **Project Overview**
-PolkaCompute is an open-source decentralized off-chain compute framework for Polkadot. It enables developers to execute heavy or time-consuming computations outside the blockchain while ensuring cryptographic integrity and verifiable results on-chain. This significantly expands the capabilities of Substrate-based chains by enabling AI inference, batch data processing, verification jobs, and advanced algorithms that cannot be run directly on-chain.
+## Project Description :page_facing_up:
 
-### **Problem Statement**
-Polkadot parachains are optimized for consensus and state transitions, not for compute-intensive workloads. Developers face limitations such as:
-- On-chain execution cost and block-time constraints.
-- Inability to run heavy algorithms or AI models natively.
-- Limited tooling for trust-minimized off-chain computation.
+PolkaCompute is a trust-minimized, decentralized off-chain compute framework designed for Polkadot and all Substrate-based chains. It enables developers to execute heavy or time-consuming workloads outside the chain (AI inference, verification tasks, cryptographic proofs, batch processing) while returning **verifiable and attestable results on-chain**.
 
-### **Proposed Solution**
-PolkaCompute introduces a modular, decentralized compute layer that:
-- Offloads computation to a distributed worker network.
-- Ensures verifiable results via multi-party attestation.
-- Provides a Substrate pallet for on-chain verification.
-- Offers a developer SDK for fast integration.
-- Includes a dashboard for monitoring compute jobs and worker performance.
+Many Polkadot parachains face limitations when attempting to run compute-intensive operations due to block-time constraints, fee inefficiency, and a lack of standardized off-chain execution environments. PolkaCompute solves these challenges by providing a **modular, scalable, and easy-to-integrate compute layer**, lowering the cost and opening new design possibilities for developers.
 
----
+This project offers:
 
-## **Ecosystem Value**
-PolkaCompute unlocks new capabilities for the Polkadot ecosystem:
-- AI-enabled dApps  
-- On-demand verifiable computation  
-- Scalable data processing  
-- Cross-chain compute services via XCMP  
+- A **ready-to-use compute worker framework** for decentralized or permissioned compute networks.  
+- A **Substrate pallet** that handles job submission, staking, result verification, and reward settlement.  
+- A **multi-node attestation system** ensuring trust-minimized compute output.  
+- SDKs for easy integration into Rust, TypeScript, and any Polkadot/Substrate ecosystem tools.  
+- A **dashboard application** for job visualization, worker reputation, and metrics.  
 
-Developers gain:
-- A standardized compute API  
-- Lower on-chain resource usage  
-- Faster application performance  
+This turn-key solution significantly expands what can be built on Polkadot, allowing developers to integrate AI-driven or computation-heavy logic without compromising chain performance or security.
 
 ---
 
-## **Technical Architecture**
-PolkaCompute consists of four main components:
 
-### **1. Substrate Pallet (on-chain logic)**
-- Manages job requests  
-- Tracks worker stake and reputation  
-- Verifies results and distributes rewards  
+## Info:
 
-### **2. Compute Worker Nodes (off-chain)**
-- Execute tasks in secure sandboxes  
-- Submit verifiable output  
-- Communicate using libp2p  
-
-### **3. PolkaCompute SDK**
-- Rust + TypeScript libraries  
-- API for submitting jobs  
-- Tooling for defining compute functions  
-
-### **4. Developer Dashboard**
-- Job visualization  
-- Worker reputation metrics  
-- Logs and compute history  
+- **Website:** *Optional*  
+- **Code Repos:** *To be filled once created*  
+- **Website:** *Optional*  
+- **Team Experience:**  
+  > The team has experience in Rust, Substrate development, distributed systems, AI/ML engineering, and backend infrastructure. Members have contributed to blockchain projects, open-source compute engines, and have strong backgrounds in systems programming.
 
 ---
 
-## **Milestones & Deliverables**
+## Development Roadmap :nut_and_bolt:
 
-### **Milestone 1 — Core Architecture & Pallet Development**
-**Duration:** 4 weeks
-
-#### Deliverables
-- Substrate pallet initial implementation  
-- Job submission and event triggers  
-- Worker registration + staking  
-- Basic reputation tracking  
-- Initial documentation  
-- Unit and integration tests  
+**Total Estimated Duration:** 20 weeks  
+**Total Cost:** *To be calculated based on DOT/USDC preference*
 
 ---
 
-### **Milestone 2 — Worker Node Framework**
-**Duration:** 6 weeks
+## Milestone 1 — Substrate Pallet & Core Architecture
 
-#### Deliverables
-- Worker node execution sandbox  
-- libp2p-based messaging  
-- Multi-worker attestation system  
-- Compute function executor  
-- Worker CLI tools  
-- Test suite  
+**Estimated Duration:** 4 weeks  
+**Costs:** *To be filled*  
+**Goal:** Implement the on-chain logic for job submission, worker staking, and basic verification.
 
----
-
-### **Milestone 3 — PolkaCompute SDK**
-**Duration:** 3 weeks
-
-#### Deliverables
-- Rust SDK  
-- TypeScript SDK  
-- Code examples + templates  
-- Developer documentation  
+| Number | Deliverable | Specification |
+|--------|-------------|---------------|
+| 1 | Core Substrate Pallet | Implementation of the PolkaCompute pallet: job submission, dispatchables, storage, events. |
+| 2 | Worker Registration + Staking | Workers register, stake tokens, and appear in the candidate set. |
+| 3 | Basic Reputation Tracking | Worker score updates based on job performance. |
+| 4 | Initial Documentation | README + pallet usage documentation. |
+| 5 | Unit & Integration Tests | 70%+ code coverage for pallet logic. |
 
 ---
 
-### **Milestone 4 — Dashboard Application**
-**Duration:** 4 weeks
+## Milestone 2 — Worker Node Framework
 
-#### Deliverables
-- Web dashboard  
-- Job visualization tools  
-- Worker reputation UI  
-- Metrics + logs  
-- User guide  
+**Estimated Duration:** 6 weeks  
+**Costs:** *To be filled*  
+**Goal:** Build the decentralized compute node framework.
 
----
-
-### **Milestone 5 — Final Testing, Audits & Launch**
-**Duration:** 3 weeks
-
-#### Deliverables
-- Full E2E testing  
-- Security audit (internal or external)  
-- Public testnet deployment  
-- Technical documentation + whitepaper  
+| Number | Deliverable | Specification |
+|--------|-------------|---------------|
+| 1 | Execution Sandbox | Secure wasm/docker sandbox to execute compute tasks. |
+| 2 | libp2p Messaging | Peer-to-peer job distribution + result broadcasting. |
+| 3 | Multi-Node Attestation | Minimum-N-of-M worker verification system. |
+| 4 | Worker CLI | CLI to run workers, show logs, connect to jobs. |
+| 5 | Worker Test Suite | Integration tests for compute flow. |
 
 ---
 
-## **Team**
+## Milestone 3 — SDK Development
 
+**Estimated Duration:** 3 weeks  
+**Costs:** *To be filled*  
+**Goal:** Provide developer libraries to submit jobs and query results.
 
-- **Name:Jeffreyxdev**  
-- **GitHub:https://github.com/Jeffreyxdev**  
-- **Email:agabaenwerejeffrey@gmail.com**  
-
----
-
-## **Token Payment Preference**
-*Select one (≥50% DOT):*
-- □ 50% DOT (vesting) + 50% USDC  
-- □ Other preference: ________________________  
-
----
-
-## **Repository Links**
-- Main repo (to be created): ________________________  
-- SDK repo (optional): ________________________  
+| Number | Deliverable | Specification |
+|--------|-------------|---------------|
+| 1 | Rust SDK | Job submission, status queries, examples. |
+| 2 | TypeScript SDK | For dApps and frontend developers. |
+| 3 | Code Templates | Ready-to-use compute job templates. |
+| 4 | Documentation | API docs + integration guide. |
 
 ---
 
-## **License**
-Apache 2.0 (recommended)
+## Milestone 4 — Dashboard Application
+
+**Estimated Duration:** 4 weeks  
+**Costs:** *To be filled*  
+**Goal:** Provide UI to monitor compute jobs, workers, and performance.
+
+| Number | Deliverable | Specification |
+|--------|-------------|---------------|
+| 1 | Web Dashboard UI | Job list, worker list, metrics panels. |
+| 2 | Logs & Activity Streams | Real-time job event viewer. |
+| 3 | Worker Reputation UI | Reputation history, scoring, reports. |
+| 4 | User Guide | How to run and use the dashboard. |
 
 ---
 
-## **Future Roadmap**
-After delivering the grant milestones, PolkaCompute will extend to:
-- Cross-chain compute marketplace  
-- AI inference marketplace  
-- Confidential computation support (TEE / ZK)  
-- Multi-chain data pipelines  
+## Milestone 5 — Final Testing, Audit & Public Testnet Deployment
+
+**Estimated Duration:** 3 weeks  
+**Costs:** *To be filled*  
+**Goal:** Final integration and release of the test network.
+
+| Number | Deliverable | Specification |
+|--------|-------------|---------------|
+| 1 | End-to-End Testing | Complete system test: pallet → workers → SDK → dashboard. |
+| 2 | Security Audit | Internal/external review of pallet + worker engine. |
+| 3 | Public Testnet | Hosted environment to test the system live. |
+| 4 | Whitepaper | Technical architecture + explainers. |
 
 ---
 
-## **Conclusion**
-PolkaCompute provides a scalable, decentralized compute layer that significantly expands what developers can build on Polkadot. This project delivers clear ecosystem value, strong infrastructure, and a robust developer experience.
+## Community Engagement
+
+We will publish documentation, demos, and technical explainers throughout the project. Planned content:
+
+- Tutorials on integrating PolkaCompute with existing Substrate chains  
+- Medium articles introducing off-chain compute use cases  
+- Weekly or bi-weekly progress updates  
+- Developer guides for running compute workers  
+
+---
+
+## Additional Information :heavy_plus_sign:
+
+**What work has been done so far?**  
+Some parts of the architecture have been designed; prototype sandbox executors and communication modules exist as internal experiments.
+
+**Have other teams contributed?**  
+No, this is a new independent initiative.
+
+**Have you applied for other grants?**  
+No.
